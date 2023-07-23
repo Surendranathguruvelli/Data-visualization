@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e8ecf1;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #e8ecf1;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        input[type="file"] {
+            display: block;
+            margin: 0 auto 10px;
+        }
+
+        select {
+            display: block;
+            margin: 0 auto 10px;
+        }
+
+        input[type="submit"] {
+            display: block;
+            margin: 0 auto;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #00b348;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <br><br><br><br><br><br><br>
+    <div class="container">
+        <h1>Upload a CSV or Excel file</h1>
+        <form method="POST" action="/" enctype="multipart/form-data"><br>
+            <input type="file" name="file" accept=".csv, .xls, .xlsx" required><br>
+            <select name="graph_type" required><br>
+                <option value="Pie">Pie Chart</option>
+                <option value="Bar">Bar Graph</option>
+                <option value="Line">Graph</option>
+                <option value="Scatter">Plot</option>
+            </select>
+            <br>
+            <input type="submit" value="Upload and Generate Graph">
+        </form>
+    </div>
+</center>
+</body>
+</html>
